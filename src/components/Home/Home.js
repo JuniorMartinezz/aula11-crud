@@ -1,6 +1,7 @@
 import React from "react";
 import Api from "../Api";
 import { useState, useEffect } from "react";
+import { StyledHome } from "./style-home";
 
 function Home(){
     const [page, setPage] = useState([]);
@@ -13,20 +14,16 @@ function Home(){
     }, []);
 
     return(
-        <div className="row">
-            <div className="col-md-1"></div>
-            <div 
-                className="col-md-10"
+        <StyledHome>
+            <div
                 dangerouslySetInnerHTML={
                     {
                         __html: page.content
                     }
                 }
             >
-                  
             </div>
-            <div className="col-md-1"></div>
-        </div>
+        </StyledHome>
         
     )
 }

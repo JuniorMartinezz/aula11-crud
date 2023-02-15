@@ -1,35 +1,44 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-    .block{
-        background-color: #4265ff;
-        padding: 1rem;
-        border-radius: 1rem;
-        color: white;
+export const StyledProducts = styled.div`
+    margin-top: 1rem;
+    margin: auto;
+
+    @media (max-width: 560px){
+        .cat-button{
+            font-size: small!important;;
+        }
     }
 
-    h1{
-        text-align: center;
+    @media (max-width: 420px){
+        .cat-button{
+            padding: 8px!important;
+        }
     }
 
-    ul{
-        list-style: none;
-        margin: 0 0 1rem 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
+    table{
+        width: 50%!important;
+
+        @media (max-width: 1275px){
+            width: fit-content!important;
+        }
     }
 
     .cat-button{
         color: white;
-        background-color: #3f0ce7;
+        background: rgba(43, 240, 187, 0.765);
         border-radius: 1rem;
         padding: 1rem;
         transition: 0.5s;
         border: none;
     }
 
-    p:hover{
-        background-color: #1500fa;
+    .cat-button:hover{
+        background: rgba(11, 68, 53, 0.765);
+        color: rgba(43, 240, 187, 0.765);
+    }
+
+    .cat-button:active{
+        border: 0.5px solid rgba(43, 240, 187, 0.765);
     }
 `
